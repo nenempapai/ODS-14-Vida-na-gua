@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a ODS 14 e descubra como proteger os oceanos e a vida marinha.">
+  <title>ODS 14 — Vida na Água</title>
+
+  <style>
+    :root {
+      --azul-escuro: #023e5a;
+      --azul: #0077a8;
+      --azul-claro: #e8f7fb;
+      --turquesa: #22a6b8;
+      --texto: #243746;
+      --branco: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: #f4fbfd;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(115deg, #006b9b, #12a6bd);
+      color: white;
+      padding: 12px 4%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 14px #00384c2b;
+    }
+
+    .topo {
+      max-width: 1120px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-right: auto;
+    }
+
+    .marca img {
+      width: 58px;
+      height: 58px;
+      object-fit: cover;
+      border-radius: 9px;
+      background: white;
+    }
+
+    .marca h1 {
+      font-size: 25px;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    nav a, .saiba-mais {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: 1px solid #ffffff70;
+      transition: .2s;
+    }
+
+    nav a:hover, .saiba-mais:hover {
+      background: #ffffff25;
+    }
+
+    .saiba-mais {
+      background: white;
+      color: var(--azul-escuro);
+      border-color: white;
+    }
+
+    .hero {
+      color: white;
+      text-align: center;
+      padding: 66px 20px;
+      background:
+        linear-gradient(#003d58a8, #003d58a8),
+        url("images.jpg") center 55%/cover;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin: 0 0 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 26px 20px 60px;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+      margin: 24px 0;
+    }
+
+    .bloco {
+      background: white;
+      padding: 34px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px #06445b0d;
+      border: 1px solid #dceff4;
+    }
+
+    h2 {
+      color: var(--azul-escuro);
+      line-height: 1.25;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--azul);
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin: 10px 0 14px;
+    }
+
+    .destaque {
+      background: var(--azul-claro);
+      border-left: 5px solid var(--turquesa);
+      padding: 15px 18px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+
+    .imagem {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      max-height: 390px;
+      object-fit: cover;
+      margin: 22px auto;
+      border-radius: 13px;
+      box-shadow: 0 5px 18px #00384c20;
+    }
+
+    .imagem-simbolo {
+      max-width: 180px;
+      max-height: 180px;
+      object-fit: contain;
+      box-shadow: none;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .cartao {
+      background: #f0fafc;
+      padding: 18px;
+      border-radius: 12px;
+      border-top: 4px solid var(--turquesa);
+    }
+
+    .cartao h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 23px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .frase {
+      text-align: center;
+      color: var(--azul);
+      font-size: 19px;
+      font-weight: bold;
+      max-width: 760px;
+      margin: 28px auto 8px;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--azul-escuro);
+      color: white;
+      padding: 26px 18px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        position: static;
+      }
+
+      .topo {
+        justify-content: center;
+      }
+
+      .marca {
+        margin: 0 auto;
+      }
+
+      nav {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .saiba-mais {
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 48px 18px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .bloco {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body id="inicio">
+
+  <header>
+    <div class="topo">
+
+      <div class="marca">
+        <img src="imagem-azul.jpg"
+             alt="Símbolo da ODS 14">
+        <h1>ODS 14 — Vida na Água</h1>
+      </div>
+
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#meio">Meio</a>
+        <a href="#fim">Fim</a>
+      </nav>
+
+      <a class="saiba-mais"
+         href="https://brasil.un.org/pt-br/sdgs/14"
+         target="_blank"
+         rel="noopener noreferrer">
+        Saiba Mais
+      </a>
+
+    </div>
+  </header>
+
+  <div class="hero">
+    <h2>Proteger os oceanos é proteger a vida</h2>
+
+    <p>
+      Conheça a importância da ODS 14 e veja como
+      pequenas atitudes podem ajudar a conservar
+      mares, rios e toda a vida aquática.
+    </p>
+  </div>
+
+  <main>
+
+    <section class="bloco">
+
+      <h2>O que são os ODS?</h2>
+
+      <p>
+        Os Objetivos de Desenvolvimento Sustentável (ODS)
+        fazem parte de uma agenda criada pela Organização
+        das Nações Unidas (ONU). São 17 objetivos que
+        buscam enfrentar desafios sociais, econômicos
+        e ambientais e construir um futuro mais justo
+        e sustentável.
+      </p>
+
+      <h2>O que é a ODS 14?</h2>
+
+      <p>
+        A ODS 14, chamada Vida na Água, busca conservar
+        e utilizar de forma sustentável os oceanos,
+        mares e recursos marinhos. Ela incentiva o combate
+        à poluição, a proteção dos ecossistemas aquáticos
+        e o uso responsável dos recursos do mar.
+      </p>
+
+      <img class="imagem imagem-simbolo"
+           src="imagem-azul.jpg"
+           alt="Ícone azul da ODS 14">
+
+      <div class="destaque">
+        <strong>Objetivo principal:</strong>
+        cuidar da vida marinha e garantir que as próximas
+        gerações também possam contar com oceanos saudáveis.
+      </div>
+
+    </section>
+
+    <section class="bloco" id="meio">
+
+      <h2>Por que os oceanos são importantes?</h2>
+
+      <p>
+        Os oceanos ocupam grande parte da superfície
+        do planeta e são essenciais para o equilíbrio
+        ambiental. Eles abrigam uma enorme variedade
+        de seres vivos e influenciam o clima e o ciclo da água.
+      </p>
+
+      <div class="grade">
+
+        <article class="cartao">
+          <h3>Biodiversidade</h3>
+          <p>
+            São o lar de peixes, tartarugas, baleias,
+            corais, algas e muitos outros organismos.
+          </p>
+        </article>
+
+        <article class="cartao">
+          <h3>Clima do planeta</h3>
+          <p>
+            Absorvem e distribuem calor, ajudando
+            a regular a temperatura da Terra.
+          </p>
+        </article>
+
+        <article class="cartao">
+          <h3>Alimentação e trabalho</h3>
+          <p>
+            Fornecem alimentos e sustentam atividades
+            como pesca, transporte e turismo.
+          </p>
+        </article>
+
+      </div>
+
+      <h2 style="margin-top:30px">
+        Quais problemas ameaçam a vida marinha?
+      </h2>
+
+      <p>
+        As atividades humanas podem causar danos
+        aos ambientes aquáticos. Entre os principais
+        problemas estão:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Poluição por plástico:</strong>
+          sacolas, garrafas e embalagens podem chegar
+          aos rios e mares e ameaçar os animais.
+        </li>
+
+        <li>
+          <strong>Descarte de esgoto e produtos químicos:</strong>
+          pode contaminar a água e prejudicar
+          os ecossistemas.
+        </li>
+
+        <li>
+          <strong>Pesca excessiva:</strong>
+          retirar muitos animais do ambiente dificulta
+          a recuperação das populações.
+        </li>
+
+        <li>
+          <strong>Mudanças climáticas:</strong>
+          o aquecimento e a acidificação dos oceanos
+          afetam espécies e recifes de coral.
+        </li>
+
+        <li>
+          <strong>Destruição de habitats:</strong>
+          manguezais, recifes e outros ambientes
+          podem ser danificados pela ação humana.
+        </li>
+      </ul>
+
+      <img class="imagem"
+           src="images.jpg"
+           alt="Margem de água coberta por resíduos">
+
+      <h2>Quais são as consequências da poluição?</h2>
+
+      <p>
+        A poluição pode ferir animais, prejudicar
+        a reprodução de espécies e desequilibrar
+        cadeias alimentares. Também afeta as pessoas:
+        comunidades que dependem da pesca e do turismo
+        podem perder renda, e a contaminação da água
+        e dos alimentos representa riscos à saúde
+        e à economia.
+      </p>
+
+    </section>
+
+    <section class="bloco">
+
+      <h2>Como podemos ajudar a proteger os oceanos?</h2>
+
+      <p>
+        Não é necessário morar perto do mar para contribuir.
+        O lixo descartado nas ruas pode ser levado pela chuva
+        até bueiros, córregos e rios, chegando aos oceanos.
+        Algumas atitudes fazem diferença:
+      </p>
+
+      <div class="grade">
+
+        <article class="cartao">
+          <h3>Reduza o plástico</h3>
+          <p>
+            Use garrafas reutilizáveis e evite produtos
+            descartáveis quando possível.
+          </p>
+        </article>
+
+        <article class="cartao">
+          <h3>Descarte corretamente</h3>
+          <p>
+            Separe os resíduos recicláveis e nunca
+            jogue lixo em ruas, rios ou praias.
+          </p>
+        </article>
+
+        <article class="cartao">
+          <h3>Economize água</h3>
+          <p>
+            Evite desperdícios e não descarte óleo,
+            tinta ou produtos químicos no ralo.
+          </p>
+        </article>
+
+        <article class="cartao">
+          <h3>Compartilhe informação</h3>
+          <p>
+            Converse sobre a preservação ambiental
+            e participe de ações de limpeza e educação.
+          </p>
+        </article>
+
+      </div>
+
+      <h2 style="margin-top:30px">
+        Exemplos de metas da ODS 14
+      </h2>
+
+      <ul>
+        <li>
+          Reduzir a poluição marinha, especialmente
+          a causada por atividades realizadas em terra.
+        </li>
+
+        <li>
+          Proteger e recuperar ecossistemas marinhos
+          e costeiros.
+        </li>
+
+        <li>
+          Promover a pesca sustentável e combater
+          a pesca ilegal e excessiva.
+        </li>
+
+        <li>
+          Ampliar o conhecimento científico e apoiar
+          a conservação dos oceanos.
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="bloco">
+
+      <h2>Vida marinha: um patrimônio que precisa ser protegido</h2>
+
+      <p>
+        Quando os oceanos estão saudáveis, milhares
+        de espécies encontram alimento e abrigo.
+        Proteger a vida marinha também significa
+        preservar o equilíbrio dos ecossistemas
+        e a qualidade de vida das pessoas.
+      </p>
+
+      <img class="imagem"
+           src="images(1).jpg"
+           alt="Peixes nadando em águas azuis e limpas">
+
+      <p class="frase">
+        "O oceano dá vida ao planeta.
+        Proteger suas águas é proteger o nosso futuro."
+      </p>
+
+    </section>
+
+    <section class="bloco" id="fim">
+
+      <h2>Conclusão</h2>
+
+      <p>
+        A ODS 14 mostra que a conservação dos oceanos
+        é uma responsabilidade de todos. A poluição,
+        a pesca excessiva e as mudanças climáticas
+        ameaçam a vida aquática e também afetam
+        as pessoas. Com informação, consumo consciente,
+        descarte correto do lixo e apoio à preservação
+        ambiental, podemos contribuir para mares
+        mais limpos e saudáveis.
+      </p>
+
+      <h2>Fontes para saber mais</h2>
+
+      <ul>
+        <li>
+          <a href="https://brasil.un.org/pt-br/sdgs/14"
+             target="_blank">
+            ONU Brasil — ODS 14
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.un.org/sustainabledevelopment/oceans/"
+             target="_blank">
+            Nações Unidas — Life Below Water
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        <a href="#inicio">Voltar ao início ↑</a>
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>ODS 14 — Vida na Água</strong></p>
+    <p>
+      Preservar os oceanos é cuidar do presente
+      e do futuro.
+    </p>
+  </footer>
+
+</body>
+</html>
